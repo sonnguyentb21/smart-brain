@@ -97,7 +97,7 @@ class App extends Component {
     app.models.predict('face-detection', this.state.input)
       .then(response => {
         if (response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://smart-brain-api-02.vercel.app/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
